@@ -1,0 +1,139 @@
+/*Global css*/
+html {
+  font-size: 16px;
+  font-family: Helvetica;
+}
+
+section {
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight:bold;
+}
+
+.flex-container{
+  display: flex;
+}
+
+.flex-left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+.flex-left img,
+.flex-left video {
+  width: 100%;
+  height: auto;
+}
+
+.flex-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*Header css*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: 4rem;
+  width: auto;
+  margin: 0 auto;
+}
+
+header ul li {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin: auto 0;
+  font-size: 1.25rem;
+}
+
+.brand img {
+  height: 2.5rem;
+}
+
+
+@media only screen and (min-width: 780px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .full-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .brand {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+  }
+}
+
+
+/*Banner css*/
+
+#banner {
+  background-color: lightgray;
+}
+
+#banner .flex-right {
+  justify-content: center;
+}
+
+#banner h1,
+#banner h3,
+#banner .button {
+  margin-left: 1rem;
+}
+
+.button {
+  font-size: 1.25rem;
+  width: 60%;
+  background-color: gray;
+  padding: .5rem;
+  text-align: center;
+}
+
+
+
+/*Info css*/
+
+
+/*Courses css*/
+#courses {
+  flex-wrap: wrap;
+}
+
+/*Thesis css*/
+
+
+/*Footer css*/
