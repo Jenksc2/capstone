@@ -4,6 +4,11 @@ html {
   font-family: Helvetica;
 }
 
+a {
+  text-decoration: none;
+  color: skyblue;
+}
+
 p,
 span {
   line-height: 1.5rem;
@@ -19,7 +24,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: bold;
 }
 
@@ -28,6 +33,7 @@ h3 {
   font-weight:bold;
 }
 
+/*Main css*/
 .flex-container{
   display: flex;
 }
@@ -45,103 +51,14 @@ h3 {
   height: auto;
 }
 
+.flex-left span {
+  padding: 1rem 0;
+}
+
 .flex-right {
   width: 40%;
   display: flex;
   flex-direction: column;
-}
-
-/*Header css*/
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  height: 4rem;
-  width: auto;
-  margin: 0 auto;
-}
-
-header ul li {
-  display: inline-block;
-  padding-left: 1rem;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  height: 2rem;
-  margin: auto 0;
-  font-size: 1.25rem;
-}
-
-.brand img {
-  height: 2.5rem;
-}
-
-
-@media only screen and (min-width: 780px) {
-  .mobile-nav {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  .full-nav {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .brand {
-    display: none;
-  }
-
-  header {
-    justify-content: center;
-  }
-}
-
-
-/*Banner css*/
-
-#banner {
-  background-color: lightgray;
-}
-
-#banner .flex-right {
-  justify-content: center;
-}
-
-#banner h1,
-#banner h3,
-#banner .button {
-  margin-left: 1rem;
-}
-
-.button {
-  font-size: 1.25rem;
-  width: 60%;
-  background-color: gray;
-  padding: .5rem;
-  text-align: center;
-}
-
-
-
-/*Info css*/
-.info h2 {
-  padding: 2rem 0 1.5rem 0;
-}
-
-.info .flex-right {
-  padding-top: 1rem;
-  border-left: 1px solid gray;
-}
-
-.flex-left span {
-  padding: 1rem 0;
 }
 
 .side-bar {
@@ -166,6 +83,166 @@ header ul li {
   padding: .5rem 0;
 }
 
+.headline {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+/*Header css*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  height: 4rem;
+  width: auto;
+  margin: 0 auto;
+}
+
+ul li {
+  display: inline-block;
+  padding-left: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  margin: auto 0;
+  font-size: 1.25rem;
+}
+
+.brand img {
+  height: 2.5rem;
+}
+
+/*Header Media Queries*/
+@media only screen and (min-width: 780px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .full-nav {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .brand {
+    display: none;
+  }
+
+  .mobile-nav {
+    width: 100%;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;;
+  }
+
+  ul li {
+    padding: 0;
+  }
+}
+
+
+/*Banner css*/
+#banner {
+  background-color: lightgray;
+}
+
+#banner .flex-right {
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+#banner h1,
+#banner h3,
+#banner .button {
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+
+.button {
+  font-size: 1.25rem;
+  width: 75%;
+  background-color: gray;
+  padding: .75rem;
+  text-align: center;
+}
+
+/*Banner Media Queries*/
+@media only screen and (max-width: 480px) {
+  #banner {
+    flex-direction: column;
+  }
+
+  #banner .flex-left {
+    width: 100%;
+    padding: 0;
+  }
+
+  #banner .flex-right {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  #banner .button {
+    margin-top: 1.5rem;
+  }
+}
+
+/*Guide css*/
+#guide h2 {
+  padding: 2rem 0 1.5rem 0;
+}
+
+#guide .flex-right {
+  padding-top: 1rem;
+  border-left: 1px solid gray;
+}
+
+/*Guide Media Queries*/
+@media only screen and (min-width: 480px) {
+  .image2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #guide .flex-left {
+    display: none;
+  }
+
+  #guide .flex-right {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .side-bar {
+    flex-direction: column;
+    border: none;
+  }
+
+  .side-bar img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .image1 {
+    display: none;
+  }
+
+  .text {
+    width: 100%;
+    padding: 2rem 0 2rem 2rem;
+  }
+}
+
 /*Courses css*/
 #courses {
   flex-wrap: wrap;
@@ -175,11 +252,6 @@ header ul li {
 
 .courses-full {
   background-color: lightgray;
-}
-
-.headline {
-  text-align: center;
-  padding-top: 2rem;
 }
 
 .class {
@@ -220,3 +292,10 @@ header ul li {
 
 
 /*Footer css*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 5rem 1.5rem;
+  border-top: 1px solid gray;
+  font-size: .825rem;
+}
