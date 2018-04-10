@@ -4,6 +4,11 @@ html {
   font-family: Helvetica;
 }
 
+p,
+span {
+  line-height: 1.5rem;
+}
+
 section {
   width: 100%;
 }
@@ -126,14 +131,92 @@ header ul li {
 
 
 /*Info css*/
+.info h2 {
+  padding: 2rem 0 1.5rem 0;
+}
 
+.info .flex-right {
+  padding-top: 1rem;
+  border-left: 1px solid gray;
+}
+
+.flex-left span {
+  padding: 1rem 0;
+}
+
+.side-bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.side-bar img {
+  width: 35%;
+  height: auto;
+  padding: 1rem;
+}
+
+.text {
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text span {
+  display: block;
+  padding: .5rem 0;
+}
 
 /*Courses css*/
 #courses {
   flex-wrap: wrap;
+  padding: 2rem 4rem;
+  justify-content: center;
+}
+
+.courses-full {
+  background-color: lightgray;
+}
+
+.headline {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.class {
+  padding: 0;
+  margin: 0 1rem 1rem 1rem;
+  width: 30%;
+  background-color: white;
+}
+
+.class-text {
+  padding: 1.5rem;
+}
+.class-text span {
+  display:block;
+  padding: .5rem 0;
+}
+
+/*Course Media Querys*/
+@media only screen and (min-width: 780px) {
+  .courses-mobile {
+    display: none;
+  }
 }
 
 /*Thesis css*/
+#info {
+  padding-top: 3rem;
+}
+
+.thesis .side-bar {
+  border: none;
+}
+
+.thesis .flex-left h3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
 
 
 /*Footer css*/
