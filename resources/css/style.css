@@ -4,6 +4,7 @@ html {
   font-family: Helvetica;
 }
 
+
 a {
   text-decoration: none;
   color: skyblue;
@@ -64,7 +65,7 @@ h3 {
 .side-bar {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid gray;
+  border-bottom: .5px solid lightgray;
 }
 
 .side-bar img {
@@ -176,7 +177,7 @@ ul li {
 }
 
 /*Banner Media Queries*/
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 876px) {
   #banner {
     flex-direction: column;
   }
@@ -195,6 +196,26 @@ ul li {
     margin-top: 1.5rem;
   }
 }
+/* POTENTIALLY UNNEEDED VARIENTS OF SIZE
+@media only screen and (max-width: 480px) {
+  #banner {
+    flex-direction: column;
+  }
+
+  #banner .flex-left {
+    width: 100%;
+    padding: 0;
+  }
+
+  #banner .flex-right {
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  #banner .button {
+    margin-top: 1.5rem;
+  }
+}*/
 
 /*Guide css*/
 #guide h2 {
@@ -203,16 +224,10 @@ ul li {
 
 #guide .flex-right {
   padding-top: 1rem;
-  border-left: 1px solid gray;
+  border-left: .5px solid lightgray;
 }
 
 /*Guide Media Queries*/
-@media only screen and (min-width: 480px) {
-  .image2 {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 480px) {
   #guide .flex-left {
     display: none;
@@ -243,6 +258,41 @@ ul li {
   }
 }
 
+@media only screen and (min-width: 480px) {
+  .image2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #guide {
+    flex-direction: column;
+  }
+
+  #guide .flex-left {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  #guide .flex-left h2 {
+    margin-left: 1rem;
+  }
+
+  #guide .flex-left p {
+    margin-left: 1rem;
+  }
+
+  #guide .flex-left span {
+    margin-left: 1rem;
+  }
+
+  #guide .flex-right {
+    width: 100%;
+  }
+}
+
+
 /*Courses css*/
 #courses {
   flex-wrap: wrap;
@@ -269,14 +319,58 @@ ul li {
   padding: .5rem 0;
 }
 
+.courses-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 1rem 2.5rem 1rem;
+  border-bottom: .5px solid lightgray;
+  border-top: .5px solid lightgray;
+}
+
+.courses-mobile h2 {
+  margin: 2rem auto;
+}
+
+.courses-mobile h3 {
+  padding: 1.5rem 1rem;
+  margin-bottom: .5rem;
+  background-color: lightgray;
+}
+
 /*Course Media Querys*/
-@media only screen and (min-width: 780px) {
+@media only screen and (max-width: 822px) {
+  .courses-full {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 822px) {
   .courses-mobile {
     display: none;
   }
 }
 
+@media only screen and (max-width: 1110px){
+  #courses {
+    padding: 2rem 2rem;
+  }
+
+  .class {
+    width: 25%;
+  }
+}
+
+
 /*Thesis css*/
+
+.thesis {
+  box-sizing: border-box;
+  padding-right: 1rem;
+}
+
 #info {
   padding-top: 3rem;
 }
@@ -290,12 +384,43 @@ ul li {
   padding-bottom: 1rem;
 }
 
+/*Thesis Media Query*/
+@media only screen and (max-width: 840px) {
+  #info {
+    display: none;
+  }
+
+  .thesis {
+    padding: 0;
+  }
+
+  .thesis .flex-left {
+    width: 100%;
+    padding: 2rem 0;
+  }
+
+  .thesis h3,
+  .thesis p {
+    display: none;
+  }
+}
 
 /*Footer css*/
 footer {
   display: flex;
   justify-content: space-between;
   padding: 1rem 1rem 5rem 1.5rem;
-  border-top: 1px solid gray;
+  border-top: .5px solid lightgray;
   font-size: .825rem;
+}
+
+/*Footer Media Query*/
+@media only screen and (max-width: 480px) {
+  footer {
+    padding: 1rem 1.5rem;
+  }
+
+  footer nav {
+    display: none;
+  }
 }
