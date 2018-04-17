@@ -2,13 +2,24 @@
 html {
   font-size: 16px;
   color: rgb(7, 7, 7);
+}
 
+section,
+header,
+footer {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 a {
   text-decoration: none;
   font-family: 'Oxygen', sans-serif;
   font-weight: bold;
+  color: rgb(240, 240, 240);
+}
+
+a:visited {
+  color: rgb(155, 155, 155);
 }
 
 p,
@@ -16,10 +27,6 @@ span {
   line-height: 1.5rem;
   font-family: 'Oxygen', sans-serif;
   font-weight: lighter;
-}
-
-section {
-  width: 100%;
 }
 
 h1 {
@@ -39,9 +46,13 @@ h3 {
   font-size: 1.5rem;
   font-weight:bold;
   font-family: 'Rufina', serif;
-
 }
 
+nav ul li {
+  display: inline-block;
+  padding-left: 1rem;
+  font-family: 'Oxygen', sans-serif;
+}
 /*Main css*/
 .flex-container{
   display: flex;
@@ -52,6 +63,7 @@ h3 {
   flex-direction: column;
   width: 60%;
   padding: 2rem 1.5rem;
+  box-sizing: border-box;
 }
 
 .flex-left img,
@@ -68,12 +80,12 @@ h3 {
   width: 40%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .side-bar {
   display: flex;
   align-items: center;
-  border-bottom: .5px solid rgb(155, 155, 155);
   transition: all .5s ease-out;
 }
 
@@ -111,31 +123,17 @@ header {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   height: 4rem;
-  width: auto;
-  margin: 0 auto;
   background-color: rgb(51, 54, 57);
   color: rgb(240, 240, 240);
 }
 
-header ul li {
-  display: inline-block;
-  padding-left: 1rem;
-  font-family: 'Oxygen', sans-serif;
+header nav {
   font-weight: 700;
 }
 
 .mobile-nav img {
   width: 2rem;
   height: auto;
-}
-
-header a {
-  font-weight: 700;
-  color: rgb(240, 240, 240);
-}
-
-header a:visited {
-  color: rgb(155, 155, 155);
 }
 
 .brand {
@@ -270,8 +268,8 @@ header a:visited {
   background-color: lightgray;
 }
 
-#guide h2 {
-  padding: 2rem 0 1.5rem 0;
+#guide .side-bar {
+  border-bottom: .5px solid rgb(155, 155, 155);
 }
 
 #guide .flex-right {
@@ -279,8 +277,12 @@ header a:visited {
   border-left: .5px solid rgb(155, 155, 155);
 }
 
+#guide h2 {
+  padding: 2rem 0 1.5rem 0;
+}
+
 #guide a {
-    color: rgb(204, 0, 0);
+  color: rgb(204, 0, 0);
 }
 
 #guide a:visited {
@@ -296,13 +298,11 @@ header a:visited {
   #guide .flex-right {
     width: 100%;
     padding: 1rem;
-    box-sizing: border-box;
   }
 
   .side-bar {
     flex-direction: column;
     border: none;
-
   }
 
   .side-bar img {
@@ -333,7 +333,6 @@ header a:visited {
 
   #guide .flex-left {
     width: 100%;
-    box-sizing: border-box;
     padding: 0;
   }
 
@@ -383,6 +382,7 @@ header a:visited {
   padding: 1.5rem;
 
 }
+
 .class-text span {
   display:block;
   padding: .5rem 0;
@@ -393,8 +393,6 @@ header a:visited {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
   padding: 0 1rem 2.5rem 1rem;
   border-bottom: .5px solid lightgray;
   border-top: .5px solid lightgray;
@@ -444,17 +442,11 @@ header a:visited {
 /*Thesis css*/
 
 .thesis {
-  box-sizing: border-box;
-  padding-right: 1rem;
   background-color: lightgray;
 }
 
-#info {
-  padding-top: 3rem;
-}
-
-.thesis .side-bar {
-  border: none;
+.thesis .flex-right {
+  padding-top: 2rem;
 }
 
 .thesis .flex-left h3 {
@@ -467,7 +459,6 @@ header a:visited {
   .thesis h3,
   .thesis p {
     display: none;
-
   }
 }
 @media only screen and (max-width: 840px) {
@@ -501,11 +492,8 @@ footer {
   color: rgb(240, 240, 240);
 }
 
-
-footer ul li {
-  display: inline-block;
-  padding-left: 1rem;
-  font-family: 'Oxygen', sans-serif;
+footer a {
+  font-weight: lighter;
 }
 
 /*Footer Media Query*/
